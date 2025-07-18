@@ -12,6 +12,7 @@ html {
 	--area-col: white;
 	--form-col: white;
 	--form-bord: #f1eded;
+	--place-col: #5f6060;
 	background-color: var(--bg-color);
 }
 
@@ -26,7 +27,9 @@ html.dark {
 	--invalid-col: #f9ed0b;
 	--area-col: #35314c;
 	--form-col: dark;
-	--form-bord: #020202;
+	--form-bord: #f3f4f7;
+	--place-col: white;
+	background-color: var(--bg-color);
 }
 
 .cont0 {
@@ -162,6 +165,7 @@ input {
 		border 0.35s linear,
 		transform 0.35s ease-out;
 	color: var(--text-col);
+	font-family: "Quicksand", sans-serif;
 }
 
 .fname:focus,
@@ -184,4 +188,13 @@ input {
 .uemail:valid,
 .upass:valid {
 	border: 2px solid var(--valid-col);
+}
+
+.fname::placeholder,
+.lname::placeholder,
+.uemail::placeholder,
+.upass::placeholder {
+	color: var(--place-col);
+	opacity: 60%;
+	font-family: "Quicksand", sans-serif;
 }
