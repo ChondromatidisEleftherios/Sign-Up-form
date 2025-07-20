@@ -8,11 +8,12 @@ html {
 	--button-hov-col: #570892;
 	--button-hov-text: #eaeaf1;
 	--valid-col: #08d2de;
-	--invalid-col: #f9ed0b;
+	--invalid-col: #e2094d;
 	--area-col: white;
 	--form-col: white;
 	--form-bord: #d9dce0;
 	--place-col: #5f6060;
+	--back-form-col: #611cce;
 	background-color: var(--bg-color);
 }
 
@@ -24,11 +25,12 @@ html.dark {
 	--button-hov-col: #21d5ef;
 	--button-hov-text: #303035;
 	--valid-col: #08d2de;
-	--invalid-col: #f9ed0b;
+	--invalid-col: #e2094d;
 	--area-col: #35314c;
 	--form-col: dark;
 	--form-bord: #f3f4f7;
 	--place-col: white;
+	--back-form-col: #EAC009;
 	background-color: var(--bg-color);
 }
 
@@ -75,7 +77,6 @@ img {
 .cont3_text {
 	width: 500px;
 	padding: 20px;
-	/*border: 3px solid red;*/
 	overflow: hidden;
 	position: relative;
 	display: flex;
@@ -91,12 +92,13 @@ img {
 	flex-direction: column;
 	max-height: 500px;
 	width: 100%;
-	align-items: flex-start;
+	align-items: space-around;
 	justify-content: space-around;
-	gap: 40px;
+	gap: 30px;
 	padding: 20px;
 	background-color: var(--area-col);
 	box-shadow: 1px 1px 1px 1px black;
+	
 }
 
 .cont4-0_forms {
@@ -135,6 +137,8 @@ img {
 		color 0.3s ease-in,
 		background-color 0.3s ease-in;
 	font-family: "Quicksand", sans-serif;
+	min-width: 75px;
+	min-height: 22px;
 }
 
 .btn1:hover {
@@ -173,7 +177,7 @@ input {
 .lname:focus,
 .uemail:focus,
 .upass:focus {
-	border: 2px solid var(--valid-col);
+	border: 2px solid var(--back-form-col);
 	transform: scale(1.03);
 }
 
@@ -201,7 +205,7 @@ input {
 }
 
 
-@media(max-width: 1120px){
+@media(max-width: 1111px){
 	.cont0{
 	max-width: 1600px;
 	display: flex;
@@ -272,17 +276,17 @@ img {
 	overflow: visible;
 	align-items: center;
 	justify-content: center;
-	gap: 100px;
-	padding-top: 100px;
+	gap: 65px;
+	padding-top: 65px;
 	background-color: var(--area-col);
-	font-size: clamp(1.5rem, 5vw, 3rem);
+	font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .cont4-0_forms {
 	flex-direction: row;
 	padding: 20px;
 	display: flex;
-	gap: clamp(50px, 15vw, 60px);
+	gap: clamp(80px, 15vw, 110px);
 	justify-content: center;
 }
 
@@ -290,7 +294,7 @@ img {
 	flex-direction: row;
 	padding: 20px;
 	display: flex;
-	gap: clamp(50px, 15vw, 60px);
+	gap: clamp(80px, 15vw, 110px);
 	justify-content: center;
 }
 
@@ -300,16 +304,42 @@ img {
 	gap: clamp(5px, 1.3vw, 10px);
 	justify-content: center;
 	align-items: center;
-	padding-bottom: 40px;
+	padding-bottom: 65px;
 }
 
 input{
 	min-width: 130px;
+	min-height: 50px;
 
 }
+
+.btn1 {
+	border-radius: 30px;
+	outline: 0;
+	min-width: 240px;
+	min-height: 50px;
+	font-size: clamp(1rem, 3vw, 2rem);
 }
 
-@media(max-width: 580px){
+.fname,
+.lname,
+.uemail,
+.upass {
+	font-size: clamp(1.3rem, 2vw, 1.4rem);
+}
+
+.fname::placeholder,
+.lname::placeholder,
+.uemail::placeholder,
+.upass::placeholder  {
+	font-size: clamp(1.3rem, 2vw, 1.4rem);
+}
+
+
+
+}
+
+@media(max-width: 600px){
 	.cont0{
 	max-width: 800px;
 	display: flex;
@@ -383,7 +413,7 @@ img {
 	gap: 40px;
 	padding-top: 40px;
 	background-color: var(--area-col);
-	font-size: clamp(1rem, 2vw, 2rem);
+	font-size: clamp(1.1rem, 2vw, 2rem);
 }
 
 .cont4-0_forms {
@@ -414,5 +444,38 @@ img {
 input{
 	max-width: 125px;
 	min-width: 90px;
+	min-height: 20px;
+}
+
+.btn1 {
+	border-radius: 30px;
+	outline: 0;
+	min-width: 200px;
+	min-height: 30px;
+	font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.fname,
+.lname {
+	font-size: clamp(1rem, 2vw, 1rem);
+}
+
+
+
+.fname::placeholder,
+.lname::placeholder {
+	font-size: clamp(1rem, 2vw, 1rem);
+}
+
+.uemail,
+.upass {
+	font-size: clamp(1rem, 2vw, 1rem);
+}
+
+
+
+.uemail::placeholder,
+.upass::placeholder {
+	font-size: clamp(0.8rem, 2vw, 1rem);
 }
 }
